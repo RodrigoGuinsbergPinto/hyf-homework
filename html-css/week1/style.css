@@ -1,0 +1,99 @@
+h3,h4 {
+    text-decoration: underline;
+}
+
+.tittle {
+    background-color: #FCFFE7B0;
+    color: black;
+    border-top: 20px solid #E0D8B0;
+    border-bottom: 5px solid #FCFFE7;
+    text-indent: 20px;
+}
+
+.pic-profile {
+    border-radius: 100%;
+    width: 12%;
+    position: absolute;
+    top: 20px;
+    left: 850px;
+}
+
+.container-contact-profile {
+    display: flex;
+}
+
+.box-contact {
+    background-color: #DEA057;
+    color: black;
+    width: 35%;
+    padding-left: 20px;
+}
+
+.box-profile {
+    background-color: #E0D8B0;
+    color: black;
+    width: 65%;
+    padding-left: 20px;
+}
+
+.container-edu-workexp {
+    display: flex;
+}
+
+.box-education {
+    background-color: #DEA057;
+    color: black;
+    width: 35%;
+    padding-left: 20px;
+}
+
+.box-work-experience {
+    background-color: #E0D8B0;
+    color: black;
+    width: 65%;
+    padding-left: 20px;
+}
+
+.container-lists {
+    display: flex;
+}
+
+.box-strategies {
+    background-color: #DEA057;
+    color: black;
+    width: 35%;
+    padding-left: 20px;
+}
+
+.box-info-hyf {
+    background-color: #E0D8B0;
+    color: black;
+    width: 65%;
+    padding-left: 20px;
+}
+
+.column1-link {
+    color: black;
+    text-decoration: none;
+}
+
+.column1-link:hover {
+    background-color: #E0D8B0;
+}
+
+.column2-link {
+    color: black;
+    text-decoration: none;
+}
+
+.column2-link:hover {
+    background-color: #DEA057;
+}
+
+.link-hyf:hover {
+    background-color: #DEA057;
+}
+
+.space2 {
+    line-height: 2;
+}
