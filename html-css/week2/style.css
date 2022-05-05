@@ -1,0 +1,163 @@
+body {
+    font-family: Verdana, sans-serif;
+}
+
+header {
+    background-color: #EFEFEF;
+    padding: 20px;
+}
+
+   h1, h2, h3, h4 {
+    text-transform: uppercase;
+}
+
+p {
+    color: rgb(98, 95, 95);
+}
+
+.navbar {
+    overflow: hidden;
+    padding: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    float: left;
+    display: block;
+    padding: 0px 10px;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: darkgray;
+    color: white;
+    font-weight: bold;
+}
+
+/* .nav-bottom and .contact has the same properties,
+ but I could not figure out how to give both classes the same properties without repetition. 
+ Is it possible and recommended? */
+
+.nav-bottom a:hover {
+    background-color: bisque;
+    color: black;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    background-color: bisque;
+    color: black;
+    font-weight: bold;
+}
+
+/* At this section I could not place the picture in HTML <img> tag and make it responsive.
+I always have a hard time working with images.
+I got help from Rostyslav (classmate), but at the end I don't know how to write the alt attribute here at CSS. */
+
+.main-image {
+    width: 100%;
+    height: 50vh;
+    background-image: url(https://raw.githubusercontent.com/rodrigoguinsbergpinto/hyf-homework/master/html-css/week2/assets/bussines.jpg);
+    background-position: center;
+    background-size:cover;
+}
+
+.container1, .container2 {
+    display: flex;
+}
+
+.item1, .galery {
+    width: 40%;
+    padding: 20px;
+}
+
+.item2, .logo {
+    width: 60%;
+    padding: 20px;
+}
+
+/* I don't know if the best practice is what I did above or if I should select the classes one by one as below.
+
+.container2 {
+    display: flex;
+}
+
+.galery {
+    width: 40%;
+    padding: 20px;
+}
+
+.logo {
+    width: 60%;
+    padding: 20px;
+} */
+
+.container3 {
+    display: flex;
+    background-color: rgb(19, 19, 208);
+    justify-content: space-around;
+    color: white;
+    padding: 20px;
+}
+
+h4 a {
+    text-decoration: none;
+    color: white;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 1.5rem;
+    justify-content: space-around;
+}
+
+.hyf-map {
+    width: 200px;
+    height: 200px;
+    border: none;
+}
+
+.color-w {
+    color: white;
+}
+
+/* Here I decided to give 2 different screen dimensions to make sure it works. 
+I did this because my computer screen doesn't reach the mobile screen size. */
+
+@media screen and (min-width: 320px) and (max-width: 480px), (min-width: 481px) and (max-width: 786px) {
+    header {
+        font-size: 70%;
+    }
+    .container1 {
+        display: flex;
+        flex-direction: column-reverse;
+        font-size: 70%;
+    }
+
+    /* Is it ok to assign more than one class to the same properties here? */
+
+    .container2, .container3 {
+        display: flex;
+        flex-direction: column;
+        font-size: 70%;
+    }
+    .item1, .item2, .galery, .logo {
+        width: 100%;
+        padding: 10px;
+    }
+    .nav-bottom {
+        display: none;
+    }
+    .contact, .about, .archives {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
