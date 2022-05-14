@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Web Forms</title>
+  </head>
+  <body>
+    <!-- I am having a hard time doing this homework.
+    I am having trouble understanding how to apply even de most simple coding.
+    Especial hard time with positioning, using pseudo-classes, child... 
+    I feel like my CSS coding is difficult to understand. Having problems with how to structure my coding.
+    I could not do a good job, even putting in more de 6 hours of work every day. :( -->
+
+    <header>
+      <div class="logo">Logo</div>
+      <nav class="navbar">Navigation</nav>
+    </header>
+
+    <div class="sign-up">
+      <h1>Sign up to yourcustomtailor.com</h1>
+      <p>
+        We can't wait to help you improve your life-style and gain the attention
+        from people around you!
+      </p>
+      <p>
+        Sign up below to save up to 70% on apparel, hand-bags and cosmetics. Our
+        agents are busy picking the best offers that match your preferences and
+        style. Every week we sill send you a hand-picked selection - we just
+        need to know a few detail abourt you first...
+      </p>
+
+      <h2>Step 1/4 - Tell us who your are.</h2>
+      <p>Progress</p>
+      <p>
+        Nice to meet you. Let's spend a minute to get to know each other? Please
+        enter the following:
+      </p>
+    </div>
+
+    <!-- I spent 3 days just figuring out how to make this first page.
+    I tried to work with the grid but I had problems aligning the items and with responsiveness, 
+    so I decided to start over with flexbox. -->
+
+    <!-- In this next section, I applied <div> instead of <ul>, <li> as you told me before.
+    What are the benefits of using a list together with Flexbox? -->
+
+    <!-- I feel like I need another 2 weeks to finish this task properly. -->
+
+    <form action="" method="get">
+      <div class="input-container">
+        <div class="left-colm-item">
+          <label class="margin-f-name" for="firstname">First name*</label>
+          <input
+            class="input-box-size"
+            type="text"
+            name="firstname"
+            id="firstname"
+          />
+        </div>
+
+        <div class="right-colm-item">
+          <label for="lastname">Last name*</label>
+          <input
+            class="input-box-size"
+            type="text"
+            name="lastname"
+            id="lastname"
+          />
+        </div>
+      </div>
+
+      <div class="input-container">
+        <div class="right-colm-item">
+          <label class="margin-country" for="country">Country*</label>
+          <select class="input-box-size-country" name="country" id="country">
+            <option value="danmark">Danmark</option>
+            <option value="faroeislands">Faroe Islands</option>
+            <option value="finland">Finland</option>
+            <option value="greenland">Greenland</option>
+            <option value="iceland">Iceland</option>
+            <option value="norway">Norway</option>
+            <option value="sweden">Sweden</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="input-container">
+        <div class="right-colm-item">
+          <label class="margin-street-address" for="address"
+            >Street address*</label
+          >
+          <input
+            class="input-box-size"
+            type="text"
+            name="address"
+            id="address"
+          />
+        </div>
+
+        <div class="left-colm-item">
+          <label class="margin-post" for="postcode">Post code*</label>
+          <input
+            class="input-box-size"
+            type="text"
+            name="postcode"
+            id="postcode"
+            pattern="[0-9]{4}"
+            title="4 digit post code number: e.g. 2000"
+          />
+        </div>
+      </div>
+
+      <div class="profile-container">
+        <div class="profile-text">
+          <h4>Profile description</h4>
+          <p class="font-small">
+            Please provide a short description of yourself to be displayed on
+            your social community pages.
+          </p>
+        </div>
+        <div class="profile-input-box">
+          <label for="profile"></label>
+
+          <!-- I don't know how to make this box responsive. -->
+          <textarea
+            name="profile"
+            id="profile"
+            rows="7"
+            cols="85"
+            maxlength="500"
+          ></textarea>
+        </div>
+      </div>
+
+      <div>
+        <p>
+          Use the same address for billing and shipping? Uncheck below to fill
+          out a separate shipping address.
+        </p>
+        <label class="shipp-checkbox" for="shippingaddress"
+          ><h3>Shipping address</h3></label
+        >
+        <input
+          type="checkbox"
+          name="shippingaddress"
+          id="shippingaddress"
+          checked
+        />
+      </div>
+
+      <div class="align-right">
+        <button class="next-button" type="button">
+          <a
+            href="https://github.com/RodrigoGuinsbergPinto/hyf-homework/tree/main/html-css/week3/index2.html"
+            >Next Step</a
+          >
+        </button>
+      </div>
+    </form>
+  </body>
+</html>
