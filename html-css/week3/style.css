@@ -24,6 +24,11 @@ header {
   width: 80%;
 }
 
+#progress-bar {
+  width: 80%;
+  height: 50px;
+}
+
 .input-container {
   display: flex;
 }
@@ -78,6 +83,11 @@ header {
   height: 33px;
 }
 
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+}
+
 .profile-container {
   display: flex;
   margin-left: 95px;
@@ -96,10 +106,13 @@ header {
 
 .shipp-checkbox {
   display: inline-block;
+  font-size: large;
+  font-weight: bold;
 }
 
 .align-right {
   text-align: right;
+  margin-top: 10px;
 }
 
 .next-button {
@@ -153,11 +166,20 @@ header {
   (min-width: 481px) and (max-width: 786px) {
   .sign-up {
     width: 100%;
+    font-size: 0.8em;
   }
 
   .input-container {
     display: flex;
     flex-direction: column;
+  }
+
+  .input-box-size {
+    width: 250px;
+  }
+
+  .input-box-size-country {
+    width: 258px;
   }
 
   .margin-f-name,
