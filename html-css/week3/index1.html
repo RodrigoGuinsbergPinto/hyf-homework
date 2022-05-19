@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Web Forms</title>
+    <title>Web Forms - Step 1</title>
   </head>
   <body>
     <!-- I am having a hard time doing this homework.
@@ -33,12 +33,16 @@
       </p>
 
       <h2>Step 1/4 - Tell us who your are.</h2>
-      <p>Progress</p>
-      <p>
-        Nice to meet you. Let's spend a minute to get to know each other? Please
-        enter the following:
-      </p>
     </div>
+    <p>Progress</p>
+    <div>
+      <label for="progress-bar"></label>
+      <progress id="progress-bar" value="25" max="100">25%</progress>
+    </div>
+    <p>
+      Nice to meet you. Let's spend a minute to get to know each other? Please
+      enter the following:
+    </p>
 
     <!-- I spent 3 days just figuring out how to make this first page.
     I tried to work with the grid but I had problems aligning the items and with responsiveness, 
@@ -49,7 +53,7 @@
 
     <!-- I feel like I need another 2 weeks to finish this task properly. -->
 
-    <form action="" method="get">
+    <form action="result.html" method="get">
       <div class="input-container">
         <div class="left-colm-item">
           <label class="margin-f-name" for="firstname">First name*</label>
@@ -76,6 +80,7 @@
         <div class="right-colm-item">
           <label class="margin-country" for="country">Country*</label>
           <select class="input-box-size-country" name="country" id="country">
+            <option value="">Select Country</option>
             <option value="danmark">Danmark</option>
             <option value="faroeislands">Faroe Islands</option>
             <option value="finland">Finland</option>
@@ -141,7 +146,7 @@
           out a separate shipping address.
         </p>
         <label class="shipp-checkbox" for="shippingaddress"
-          ><h3>Shipping address</h3></label
+          >Shipping address</label
         >
         <input
           type="checkbox"
@@ -152,12 +157,11 @@
       </div>
 
       <div class="align-right">
-        <button class="next-button" type="button">
-          <a
-            href="https://htmlpreview.github.io/?https://github.com/RodrigoGuinsbergPinto/hyf-homework/blob/master/html-css/week3/index2.html"
-            >Next Step</a
-          >
-        </button>
+        <button class="next-button" type="submit"></button>
+        <a
+          href="https://htmlpreview.github.io/?https://github.com/RodrigoGuinsbergPinto/hyf-homework/blob/master/html-css/week3/index2.html"
+          >Next Step</a
+        >
       </div>
     </form>
   </body>
