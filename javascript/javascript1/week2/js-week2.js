@@ -1,17 +1,16 @@
-// //////   FLIGHT BOOKING FULLNAME FUNCTION     ///////
-////////////////////////////////////////////////////////
+// FLIGHT BOOKING FULLNAME FUNCTION
 
-function getFullname(firstname, surname, useFormalName, gender) {
-    if (gender == false && useFormalName == true) { // I believe in this case it should also be a 'checked selector' for gender.
+function getFullname(firstname, surname, isUsingFormalName, isMale) {
+    if (isMale === false && isUsingFormalName === true) {
         return `Lady ${firstname} ${surname}`;
-    } else if (useFormalName == true) {
+    } else if (isUsingFormalName === true) {
         return `Lord ${firstname} ${surname}`;
-    } else if (firstname == "" || surname == "") {
+    } else if (firstname === "" || surname === "") {
       alert(`PLEASE ENTER YOUR FULL NAME!`)
         return `PLEASE ENTER YOUR FULL NAME!`;
     } else {
         return `${firstname} ${surname}`;
-    }
+      }
     }
    
 const fullname1 = getFullname('Frederik', 'Christian', true, true);
@@ -25,11 +24,7 @@ console.log(fullname3);
 console.log(fullname4);
 
 
-////////////////////////////////////////////////////////////////////
-///////////////////       EVENT APLICATION      ////////////////////
-////////////////////////////////////////////////////////////////////
-
-//This was only possible with the help of @Adrian Bordinc through #zendesk-studyroom.
+// EVENT APLICATION
 
 const weekdays = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
 
@@ -39,32 +34,43 @@ function getEventWeekday(daysToEvent) {
   const eventDay = currentDay + daysToEvent;
   const dayIndex = eventDay % 7; // or (eventDay % weekdays.length)
   console.log(`The event will take place on ${weekdays[dayIndex]}.`)
-  // return weekdays[dayIndex]; // Should I keep this line?
- }
+  }
 getEventWeekday(2);
 
 
-////////////////////////////////////////////////////////////////////
-/////////////////////       WEATHER WEAR      //////////////////////
-////////////////////////////////////////////////////////////////////
+// WEATHER WEAR
 
-function whatToWear(temperature) {
-    if (temperature < 10) {
-        console.log(`Wear a very warm jacket.`);
-    } else if (temperature < 20) {
-        console.log(`Wear a light jacket.`);
-    } else if (temperature < 30) {
-        console.log(`It's time for shorts and a t-shirt.`);
-    } else {
-        console.log(`Get your flip-flops on and go to the beach!`);
-    }
+const whatToWear = function(temperature) {
+  switch (temperature) {
+    case temperature < 10:
+      console.log(`Wear a very warm jacket.`);
+      break;
+    case temperature < 20:
+      console.log(`Wear a light jacket.`);
+      break;
+    case temperature < 30:
+      console.log(`It's time for shorts and a t-shirt.`);
+      break;
+    case temperature < 40:
+      console.log(`Get your flip-flops on and go to the beach!`);
+      break;
+
+  }
 }
-whatToWear(15);
+    // if (temperature < 10) {
+    //     console.log(`Wear a very warm jacket.`);
+    // } else if (temperature < 20) {
+    //     console.log(`Wear a light jacket.`);
+    // } else if (temperature < 30) {
+    //     console.log(`It's time for shorts and a t-shirt.`);
+    // } else {
+    //     console.log(`Get your flip-flops on and go to the beach!`);
+    // }
+
+whatToWear(8);
 
 
-////////////////////////////////////////////////////////////////////
-///////////////////       STUDENT MANAGER       ////////////////////
-////////////////////////////////////////////////////////////////////
+// STUDENT MANAGER
 
 const class07Students = [];
 
@@ -101,9 +107,7 @@ function getNumberOfStudents(totalStudents) {
 getNumberOfStudents(class07Students.length);
 
 
-////////////////////////////////////////////////////////////////////
-/////////////////////       CANDY PRICE       //////////////////////
-////////////////////////////////////////////////////////////////////
+// CANDY PRICE
 
 const boughtCandyPrices = []
 
@@ -131,6 +135,7 @@ console.log(boughtCandyPrices);
 
 
 
+
 const amountToSpend = Math.floor(Math.random() * 100);
 // I can't get this to work.
 function canBuyMoreCandy() {
@@ -141,6 +146,9 @@ function canBuyMoreCandy() {
   } else {
     console.log(`Enough candy for you!`);
   }
+  return total
+  total total += boughtCandyPrices[i];
 }
 }
 
+console.log(total += boughtCandyPrices[i]);
