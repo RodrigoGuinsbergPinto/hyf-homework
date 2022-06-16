@@ -10,8 +10,8 @@ function getFullname(firstname, surname, isUsingFormalName, isMale) {
         return `PLEASE ENTER YOUR FULL NAME!`;
     } else {
         return `${firstname} ${surname}`;
-      }
     }
+}
    
 const fullname1 = getFullname('Frederik', 'Christian', true, true);
 const fullname2 = getFullname('Mary', 'Donaldson', true, false);
@@ -34,14 +34,14 @@ function getEventWeekday(daysToEvent) {
   const eventDay = currentDay + daysToEvent;
   const dayIndex = eventDay % 7; // or (eventDay % weekdays.length)
   console.log(`The event will take place on ${weekdays[dayIndex]}.`)
-  }
+}
 getEventWeekday(2);
 
 
 // WEATHER WEAR
 
 const whatToWear = function(temperature) {
-  switch (temperature) {
+  switch (true) {
     case temperature < 10:
       console.log(`Wear a very warm jacket.`);
       break;
@@ -51,23 +51,11 @@ const whatToWear = function(temperature) {
     case temperature < 30:
       console.log(`It's time for shorts and a t-shirt.`);
       break;
-    case temperature < 40:
+    default:
       console.log(`Get your flip-flops on and go to the beach!`);
-      break;
-
-  }
+    }
 }
-    // if (temperature < 10) {
-    //     console.log(`Wear a very warm jacket.`);
-    // } else if (temperature < 20) {
-    //     console.log(`Wear a light jacket.`);
-    // } else if (temperature < 30) {
-    //     console.log(`It's time for shorts and a t-shirt.`);
-    // } else {
-    //     console.log(`Get your flip-flops on and go to the beach!`);
-    // }
-
-whatToWear(8);
+  whatToWear(8);
 
 
 // STUDENT MANAGER
@@ -75,17 +63,22 @@ whatToWear(8);
 const class07Students = [];
 
 function addStudentToClass(studentName) {
-  if (studentName === 'Queen' && !class07Students.includes(studentName)){
-    class07Students.push(studentName);
-  } else if (class07Students.length >= 6) {
+  switch (true) {
+    case studentName === 'Queen' && !class07Students.includes(studentName):
+      class07Students.push(studentName);
+      break;
+    case class07Students.length >= 6:
       alert(`Cannot add more students to class07!`);
-  } else if (class07Students.includes(studentName)) {
+      break;
+    case class07Students.includes(studentName):
       alert(`Student ${studentName} is already in class!`);
-  } else if (studentName === '' || studentName === undefined) {
-      alert(`Please enter a valid name!`)
-  } else {
-    class07Students.push(studentName)
-  }
+      break;
+    case studentName === '' || studentName === undefined:
+      alert(`Please enter a valid name!`);
+      break;
+    default:
+      class07Students.push(studentName)
+    }
 }
 
 addStudentToClass('Mario');
@@ -96,59 +89,62 @@ addStudentToClass('Toad');
 addStudentToClass('Bowser');
 addStudentToClass('Queen');
 
-
 console.log(class07Students);
-
 
 function getNumberOfStudents(totalStudents) {
   console.log(`There are ${totalStudents} students in class07.`);
-  }
+}
 
 getNumberOfStudents(class07Students.length);
 
 
 // CANDY PRICE
+// Add Candy Function
 
 const boughtCandyPrices = []
 
 function addCandy(candyType, weight) {
-  if (candyType === 'sweet') {
-    return boughtCandyPrices.push(weight * 0.5);
-  } else if (candyType === 'chocolate') {
-    return boughtCandyPrices.push(weight * 0.7);
-  } else if (candyType === 'toffee') {
-    return boughtCandyPrices.push(weight * 1.1);
-  } else if (candyType === 'chewing-gum') {
-    return boughtCandyPrices.push(weight * 0.03);
-  } else {
-    console.log(`Sorry, we don't have ${candyType}`);
+  switch (true) {
+    case candyType === 'sweet':
+      boughtCandyPrices.push(weight * 0.5);
+      break;
+    case candyType === 'chocolate':
+      boughtCandyPrices.push(weight * 0.7);
+      break;
+    case candyType === 'toffee':
+      boughtCandyPrices.push(weight * 1.1);
+      break;
+    case candyType === 'chewing-gum':
+      boughtCandyPrices.push(weight * 0.03);
+      break;
+    default:
+      console.log(`Sorry, we don't have ${candyType}`);
   }
 }
 
 const candyForRodrigo = addCandy('sweet', 100);
 const candyForMarcos = addCandy('chocolate', 150);
-const candyForJohn = addCandy('toffee', 200);
-const candyForMary = addCandy('chewing-gum', 250);
+const candyForJohn = addCandy('toffee', 160);
+const candyForMary = addCandy('chewing-gum', 200);
 const candyForThomas = addCandy('skumfiduser', 100);
 
 console.log(boughtCandyPrices);
 
 
-
-
+// Can I buy more?
 const amountToSpend = Math.floor(Math.random() * 100);
-// I can't get this to work.
+console.log(amountToSpend)
 function canBuyMoreCandy() {
-    let total = 0;
-    for(let i = 0; i < boughtCandyPrices.length; i++) {
-    if (total <= amountToSpend) {
-    console.log(`You can buy more, so please do!`);
-  } else {
-    console.log(`Enough candy for you!`);
+  let total = 0;
+  for(let i = 0; i < boughtCandyPrices.length; i++) {
+    total += boughtCandyPrices[i];
   }
-  return total
-  total total += boughtCandyPrices[i];
-}
+
+  if (total <= amountToSpend) {
+  console.log(`You can buy more, so please do!`);
+  } else {
+  console.log(`Enough candy for you!`);
+  }
 }
 
-console.log(total += boughtCandyPrices[i]);
+canBuyMoreCandy(boughtCandyPrices);
