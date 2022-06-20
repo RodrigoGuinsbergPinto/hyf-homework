@@ -5,14 +5,11 @@ const travelInformation = {
     destinationDistance: 432,
 };
   
-const travelTimeInMinutes = travelInformation.destinationDistance * 60 / travelInformation.speed;
-  
-function convert(num) {
-    const hours = Math.floor(num / 60);
-    const minutes = Math.floor(num % 60);
+function getTotalTripTime(speed, destinationDistance) {
+    const travelTimeInMinutes = travelInformation.destinationDistance * 60 / travelInformation.speed;
+    const hours = Math.floor(travelTimeInMinutes / 60);
+    const minutes = Math.floor(travelTimeInMinutes % 60);
     return (`The total time of the trip will be ${hours} hours and ${minutes} minutes.`);
 }
   
-convert(travelTimeInMinutes);
-console.log(convert(travelTimeInMinutes));
-  
+console.log(getTotalTripTime(travelInformation));
