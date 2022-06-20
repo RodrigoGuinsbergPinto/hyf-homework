@@ -13,7 +13,12 @@ const names = [
 
 const nameToRemove = "Ahmad";
 
-const indexOfNameToRemove = names.indexOf(nameToRemove);
-names.splice(indexOfNameToRemove, 1);
+// const indexOfNameToRemove = names.indexOf(nameToRemove);
+// names.splice(indexOfNameToRemove, 1);
 
+function removeName(nameToRemove) {
+  const indexOfNameToRemove = names.indexOf(nameToRemove);
+  names.splice(indexOfNameToRemove, 1);
+}
+removeName(nameToRemove);
 console.log(names);
