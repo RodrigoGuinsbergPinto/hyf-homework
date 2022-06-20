@@ -28,7 +28,8 @@ console.log(seriesDurations);
 let percentageOfLife = 0;
 
 const calcSeriesTime = function() {
-    const lifeSpanInMin = 80 * 365 * 60 * 24;
+    const age = 80;
+    const lifeSpanInMin = age * 365 * 60 * 24;
     const dayToMinutes = 24 * 60;
     const hoursToMinutes = 60;
     
