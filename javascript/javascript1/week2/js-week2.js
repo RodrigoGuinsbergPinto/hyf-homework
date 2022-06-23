@@ -131,6 +131,7 @@ const candyForThomas = addCandy('skumfiduser', 100);
 console.log(boughtCandyPrices);
 
 
+
 // Can I buy more?
 const amountToSpend = Math.floor(Math.random() * 100);
 console.log(amountToSpend)
