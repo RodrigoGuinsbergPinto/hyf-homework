@@ -1,7 +1,7 @@
 const products = getAvailableProducts();
 
-const productsList = document.createElement("ul");
-productsList.innerHTML = "'LIST OF PRODUCTS'";
+const productsList = document.querySelector("ul");
+productsList.innerHTML = "LIST OF PRODUCTS";
 document.body.appendChild(productsList);
 
 function renderProducts(products) {
