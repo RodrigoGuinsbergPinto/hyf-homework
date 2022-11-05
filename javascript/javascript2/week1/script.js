@@ -21,27 +21,31 @@ const danishString = "Jeg har en blå bil";
 const danishString2 = "Blå grød med rød bær";
 const danishString3 = "";
 
-function findDanishLetters(sentence) {
-  const danishLetters = {};
-  const lettersArray = sentence.split("");
+let countÆ = 0;
+let countØ = 0;
+let countÅ = 0;
+// let totalDanishLetters = countÆ + countØ + countÅ;
 
-  let countÆ = 0;
-  let countØ = 0;
-  let countÅ = 0;
+function findDanishLetters(sentence) {
+  const lettersArray = sentence.toLowerCase().split("");
 
   for (let i = 0; i < lettersArray.length; i++) {
-    if (lettersArray[i] === "æ" || lettersArray[i] === "Æ") {
+    if (lettersArray[i] === "æ") {
       countÆ++;
-    } else if (lettersArray[i] === "ø" || lettersArray[i] === "Ø") {
+    } else if (lettersArray[i] === "ø") {
       countØ++;
-    } else if (lettersArray[i] === "å" || lettersArray[i] === "Å") {
+    } else if (lettersArray[i] === "å") {
       countÅ++;
     }
   }
+  return countÆ + countØ + countÅ;
+}
 
-  const totalDanishLetters = countÆ + countØ + countÅ;
-  if (totalDanishLetters === 0) {
-    return `No danish letters found!`; // Implementation for string without Danish letters or empty string.
+function displayDanishLettersFound() {
+  const danishLetters = {};
+
+  if (countÆ + countØ + countÅ === 0) {
+    console.log(`No danish letters found!`); // Implementation for string without Danish letters or empty string.
   } else {
     danishLetters.total = countÆ + countØ + countÅ;
     if (countÆ > 0) {
@@ -53,11 +57,13 @@ function findDanishLetters(sentence) {
     if (countÅ > 0) {
       danishLetters.å = countÅ;
     }
-    return danishLetters;
+    console.log(danishLetters);
   }
 }
 
-console.log(findDanishLetters(danishString2));
+findDanishLetters(danishString2);
+
+displayDanishLettersFound(findDanishLetters);
 
 // Exercise 2 - SPIRIT ANIMAL
 
@@ -83,20 +89,22 @@ const mainBtn = document.createElement("button");
 mainBtn.innerHTML = "Get Animal";
 document.body.appendChild(mainBtn);
 
-mainBtn.addEventListener("click", function () {
+const generateSpiritAnimal = function () {
   const savedName = nameInput.value;
   const h3 = document.createElement("h3");
   const newRandomAnimal = spiritAnimalStrings[Math.trunc(Math.random() * 10)];
 
-  if (nameInput.value === "") {
+  if (savedName === "") {
     alert(`Please type your name!`);
   } else if (mainBtn.innerHTML === "Get Animal") {
     document.body.appendChild(h3);
-    h3.innerHTML = nameInput.value + " - " + randomAnimal;
+    h3.innerHTML = savedName + " - " + randomAnimal;
     mainBtn.innerHTML = "Get New Spirit Animal";
     mainBtn.style.background = "lightblue";
   } else {
     document.body.appendChild(h3);
-    h3.innerHTML = nameInput.value + " - " + newRandomAnimal;
+    h3.innerHTML = savedName + " - " + newRandomAnimal;
   }
-});
+};
+
+mainBtn.addEventListener("click", generateSpiritAnimal);
