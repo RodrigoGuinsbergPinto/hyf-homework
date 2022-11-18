@@ -41,7 +41,7 @@ searchInput.addEventListener("keyup", function () {
   if (!inputValue || inputValue === " ") {
     productsList.innerHTML = "";
     alert("Please enter product name!");
-    // renderProducts(products);
+    renderProducts(products);
   } else if (filteredProducts.length > 0) {
     productsList.innerHTML = "Search result:";
     renderProducts(filteredProducts);
@@ -58,7 +58,7 @@ maxPriceInput.addEventListener("keyup", function () {
     .sort((a, b) => a.price - b.price); // ascending order of price
   if (!maxInput) {
     alert("Type maxium product price!");
-    // renderProducts(maxPriceFilter);
+    renderProducts(maxPriceFilter);
   } else {
     productsList.innerHTML = `Itens found with maximum price of $${maxInput},00:`;
     // productsList.style.fontWeight = "bold";
