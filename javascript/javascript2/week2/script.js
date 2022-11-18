@@ -39,7 +39,7 @@ const moviesWithTag = movies.filter((movie) => {
 });
 // Using Ternary Operator
 // let rating =
-//     (movie.rating >= 7) ? "Good" : movie.rating >= 4 && movie.rating < 7 ? "Average" : "Bad";
+//     (movie.rating >= 7) ? "Good" : movie.rating >= 7 && movie.rating < 7 ? "Average" : "Bad";
 //   movie.tag = rating;
 //   return movie;
 // });
