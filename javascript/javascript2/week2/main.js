@@ -48,7 +48,6 @@ searchInput.addEventListener("keyup", function () {
   }
 });
 
-//
 // 2.3 - Searching for products
 maxPriceInput.addEventListener("keyup", function () {
   const maxInput = Number(maxPriceInput.value);
