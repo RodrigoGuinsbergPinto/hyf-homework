@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: black;
+  background-color: #f3f3f3;
+  height: 100vh;
+  padding: 2rem;
+  font-size: 1.5rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+.app {
+  position: relative;
+  max-width: 50rem;
+  margin: 1rem auto;
+  display: grid;
+  grid-template-rows: auto;
+  gap: 2rem;
+}
+
+.input-boxes {
+  border-radius: 1rem;
+  padding: 3rem 4rem;
+  color: #333;
+  background-color: #ffcb03;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 2.5fr 2.5fr;
+  grid-template-rows: auto auto;
+  gap: 0.5rem 3rem;
+}
+
+ul {
+  list-style-type: none;
+  border-radius: 1rem;
+  padding: 3rem 4rem;
+  color: #333;
+  background-color: #9be15d;
+}
