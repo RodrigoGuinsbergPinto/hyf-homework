@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #153462;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background: #f6f6c9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  margin-top: 50px;
+  width: 60%;
+  background: #bad1c2;
+  border-radius: 20px;
+  padding: 25px;
+}
+
+h1 {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+
+button {
+  margin-top: 20px;
+  width: 160px;
+  height: 50px;
+  color: black;
+  border: 1px solid black;
+  background-color: rgb(54, 142, 176);
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+button:hover {
+  cursor: grab;
+  background-color: lightgreen;
+}
+
+.players {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.player-s,
+.player-l {
+  padding: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: #4fa095;
+}
+
+.game-over {
+  color: red;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  section {
+    width: 95%;
+  }
+
+  .players {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .player-s,
+  .player-l {
+    padding: 30px;
+  }
+}
