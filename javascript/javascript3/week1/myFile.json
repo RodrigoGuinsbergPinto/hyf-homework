@@ -1,0 +1,23 @@
+{
+  "motorcycles": {
+    "HONDA": {
+      "team": "Repsol",
+      "wins": 100,
+      "titles": [2013, 2014, 2016],
+      "riders": ["Marquez", "Mir"]
+    },
+
+    "Yamaha": {
+      "team": "Monster Energy",
+      "wins": 90,
+      "titles": [2012, 2015, 2021],
+      "riders": ["Quartararo", "Morbidelli"]
+    },
+    "Ducati": {
+      "team": "Lenovo",
+      "wins": 500,
+      "titles": [2007, 2022],
+      "riders": ["Bagnaia", "Bastianini"]
+    }
+  }
+}
