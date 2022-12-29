@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: #e5d9b6;
+  background-image: url(./money.jpg);
+  background-size: contain;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+h1 {
+  text-align: center;
+  color: #181d31;
+}
+
+.converter {
+  margin: 1rem;
+  background-color: #5f8d4e;
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-data {
+  background-color: #a4be7b;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+}
+
+.amount,
+.convert-from,
+.convert-to {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  border: 1px solid black;
+}
+
+input {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
