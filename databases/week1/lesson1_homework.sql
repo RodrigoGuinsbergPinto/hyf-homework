@@ -11,7 +11,7 @@ WHERE due_date IS NULL;
 SELECT *
 FROM task
 INNER JOIN status ON task.status_id = status.id
-WHERE status_id = 3;
+WHERE status.name = 'Done';
 
 -- 4. Find all the tasks that are not marked as done
 SELECT *
