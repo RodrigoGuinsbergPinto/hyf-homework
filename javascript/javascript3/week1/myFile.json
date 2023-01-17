@@ -1,5 +1,5 @@
 {
-  "motorcycles": {
+  "motorcycles": [
     "HONDA": {
       "team": "Repsol",
       "wins": 100,
@@ -19,5 +19,5 @@
       "titles": [2007, 2022],
       "riders": ["Bagnaia", "Bastianini"]
     }
-  }
+  ]
 }
