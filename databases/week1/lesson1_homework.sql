@@ -16,8 +16,8 @@ WHERE status.name = 'Done';
 -- 4. Find all the tasks that are not marked as done
 SELECT *
 FROM task
-WHERE status_id != 3
-ORDER BY status_id;
+INNER JOIN status ON task.status_id = status.id
+WHERE status.name != 'Done';
 
 -- 5. Get all the tasks, sorted with the most recently created first
 SELECT *
