@@ -1,4 +1,3 @@
-const inputEl = document.getElementById("inputEl");
 const convertFrom = document.getElementById("convertFrom");
 const convertTo = document.getElementById("convertTo");
 const convertBtn = document.getElementById("btn");
@@ -67,6 +66,7 @@ const fetchNewCurrency = async (currency) => {
 };
 
 const getConversion = async () => {
+  const inputEl = document.getElementById("inputEl");
   const inputValue = inputEl.value;
   const convertToValue = convertTo.value;
   const convertFromValue = convertFrom.value;
