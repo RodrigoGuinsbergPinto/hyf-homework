@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="weather.css" />
+    <title>JS3-week1 HW</title>
+  </head>
+  <body>
+    <h1>Get weather forecast</h1>
+
+    <div class="getInfo">
+      <input id="cityInput" type="text" placeholder="Enter city name" />
+
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <div class="currentTemp">
+      <div id="city" class="displayCity"></div>
+      <div id="temp" class="displayTemp"></div>
+    </div>
+
+    <main>
+      <section>
+        <img id="icon" src="" alt="" class="displayIcon" />
+        <div id="sky" class="displaySky"></div>
+      </section>
+
+      <aside>
+        <div id="windSpeed"></div>
+        <div id="sunrise"></div>
+        <div id="sunset"></div>
+      </aside>
+    </main>
+
+    <script src="weather.js"></script>
+  </body>
+</html>
