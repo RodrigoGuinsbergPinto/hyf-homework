@@ -3,7 +3,7 @@ USE hyf_lesson2;
 -- Part 1: Working with tasks
 -- Write the following sql queries:
 -- Add a task with these attributes: title, description, created, updated, due_date, status_id, user_id
-INSERT INTO task (id, title, description, created, updated, due_date, status_id) VALUES (default, 'Book flight', 'Vacation.', now(), now(), '2023-03-31 ', 1);
+INSERT INTO task (title, description, created, updated, due_date, status_id, user_id) VALUES ('Book flight', 'Vacation.', now(), now(), '2023-03-31', 1, 1);
 
 -- Change the title of a task
 UPDATE task

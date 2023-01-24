@@ -2,21 +2,23 @@
 -- Get all the tasks assigned to users whose email ends in @spotify.com
 USE hyf_lesson2;
 
-SELECT *
-FROM user
-WHERE email LIKE '%@spotify.com';
+SELECT user.name, user.email, task.title, task.id
+FROM task
+INNER JOIN user_task ON task.id = user_task.task_id
+INNER JOIN user ON user.id = user_task.user_id
+WHERE user.email LIKE '%@spotify.com';
 
 -- Get all the tasks for 'Donald Duck' with status 'Not started'
-SELECT *
+SELECT user.name, status.name
 FROM user
 INNER JOIN user_task ON user.id = user_task.user_id
 INNER JOIN task ON user_task.task_id = task.id
-INNER JOIN STATUS ON task.status_id = status.id
+INNER JOIN status ON task.status_id = status.id
 WHERE user.name = 'Donald Duck'
 AND status.name = 'Not started';
 
 -- Get all the tasks for 'Maryrose Meadows' that were created in september (hint: month(created)=month_number)
-SELECT *
+SELECT user.name, task.title, task.id AS task_id, task.created
 FROM user
 INNER JOIN user_task ON user.id = user_task.user_id
 INNER JOIN task ON user_task.task_id = task.id
