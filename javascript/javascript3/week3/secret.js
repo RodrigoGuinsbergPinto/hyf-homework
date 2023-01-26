@@ -1,0 +1,3 @@
+const API_KEY = "c3d5453ad9c045c181889ace5ab5317c";
+
+const RAPID_API_KEY = "77b08926d7msh0652f861ba8e3efp103253jsnd9b4ae64dca0";

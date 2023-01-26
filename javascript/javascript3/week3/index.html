@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>JS3-week3 homework</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <main>
+        <header>
+          <h1>Screenhsot Spot</h1>
+          <p class="description">Take beautiful screenshots of websites.</p>
+        </header>
+        <input
+          type="text"
+          id="urlInput"
+          placeholder="Enter URL like https://www.google.com/"
+        />
+        <div class="mainBtns">
+          <button id="getScreenshotBtn" class="btn">SCREEN CAPTURE</button>
+          <!-- <button id="saveBtn">save screenshot</button> -->
+          <button id="showBtn" class="btn">Display your screenshots</button>
+        </div>
+      </main>
+      <div id="savingMsg"></div>
+      <div id="savedImgs" class="savedImgs"></div>
+    </div>
+
+    <script src="screenshot_app.js"></script>
+    <script src="secret.js"></script>
+  </body>
+</html>
