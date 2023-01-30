@@ -6,10 +6,10 @@ const savingMsg = document.getElementById("savingMsg");
 const displayListBtn = document.getElementById("showBtn");
 const savedImgsEl = document.getElementById("savedImgs");
 
-let screenshotURL;
+let screenshotURL = null;
 
 const generateScreenshot = async () => {
-  if (urlInput.value === "") {
+  if (!urlInput.value) {
     alert("Insert a url!");
   } else {
     savingMsg.innerHTML = `<p class='message'>capturing...</p>`;
