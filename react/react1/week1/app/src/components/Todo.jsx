@@ -1,7 +1,9 @@
-function Todo({ description, deadline }) {
+function Todo(props) {
+  const { todo } = props;
+
   return (
     <li>
-      {description}, {deadline}
+      {todo.description}, {todo.deadline}
     </li>
   );
 }
