@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import TodoList from "./components/TodoList";
-// import todosData from "./components/todosData";
 import Counter from "./components/Counter";
 import ControlledInputs from "./components/ControlledInputs";
 
@@ -18,7 +17,6 @@ function App() {
         { signal }
       );
       const json = await res.json();
-      // console.log(json);
       setTodos(json);
     })();
     return () => {
