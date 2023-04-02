@@ -3,11 +3,11 @@ USE meal_sharing;
 -- Now add a couple of different meals, reservations and reviews with different attributes.
 -- add meal
 INSERT INTO meal (`title`, `description`, `location`, `when`, `max_reservations`, `price`, `created_date`)
-VALUES ('bistecca', 'sirloin steak with porcini cream sauce served with chips & peas', 'amager', '2023-03-05 18:00:00', 20, 165, current_date() );
+VALUES ('Bistecca', 'sirloin steak with porcini cream sauce served with chips & peas.', 'amager', '2023-03-05 18:00:00', 20, 165, current_date() );
 INSERT INTO meal (`title`, `description`, `location`, `when`, `max_reservations`, `price`, `created_date`)
-VALUES ('insalata di pollo', 'gilled chicken mixed leaf salad', 'vesterbro', '2023-03-04 18:30:00', 10, 95, current_date());
+VALUES ('Insalata di Pollo', 'gilled chicken mixed leaf salad.', 'vesterbro', '2023-03-04 18:30:00', 10, 95, current_date());
 INSERT INTO meal (`title`, `description`, `location`, `when`, `max_reservations`, `price`, `created_date`)
-VALUES ('tiramisu', 'layered no-bake dessert consisting of ladyfingers soaked with coffee and rum, then layered with a whipped mixture of sugar, eggs and the creamy, sweet mascarpone cheese sprinkled with cocoa', 'vesterbro', '2023-03-04 18:30:00', 30, 75, current_date());
+VALUES ('Tiramisu', 'layered no-bake dessert consisting of ladyfingers soaked with coffee and rum, then layered with a whipped mixture of sugar, eggs and the creamy, sweet mascarpone cheese sprinkled with cocoa.', 'vesterbro', '2023-03-04 18:30:00', 30, 75, current_date());
 
 -- add reservation
 INSERT INTO `reservation` (`number_of_guests`, `meal_id`, `created_date`, `contact_phonenumber`, `contact_name`, `contact_email`)

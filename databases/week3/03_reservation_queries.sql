@@ -6,7 +6,7 @@ FROM reservation;
 
 -- Add a new reservation
 INSERT INTO `reservation` (`number_of_guests`, `meal_id`, `created_date`, `contact_phonenumber`, `contact_name`, `contact_email`)
-VALUES (4, 2, current_date(), '77 91 23 81', 'linda', 'linda@aol.com');
+VALUES (4, 2, current_date(), '77 91 23 81', 'Linda', 'linda@aol.com');
 
 -- Get a reservation with any id, fx 1
 SELECT *
