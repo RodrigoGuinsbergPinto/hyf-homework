@@ -6,7 +6,7 @@ FROM meal;
 
 -- Add a new meal
 INSERT INTO meal (`title`, `description`, `location`, `when`, `max_reservations`, `price`, `created_date`)
-VALUES ('risotto pollo porcine', 'chicken with wild mushroom, cream peas & white wine sauce', 'nørrebro', '2023-03-04 19:00:00', 2, 150, current_date() );
+VALUES ('Risotto Pollo Porcine', 'chicken with wild mushroom, cream peas & white wine sauce.', 'nørrebro', '2023-03-04 19:00:00', 2, 150, current_date() );
 
 -- Get a meal with any id, fx 1
 SELECT *
