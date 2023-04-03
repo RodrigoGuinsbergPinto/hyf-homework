@@ -1,7 +1,5 @@
 carrot
 lettuce
-eggplant
+greenbeens
 tomato
 radish
-squash
-spinach
