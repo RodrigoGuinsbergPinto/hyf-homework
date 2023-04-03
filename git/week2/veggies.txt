@@ -1,5 +1,7 @@
 carrot
 lettuce
-onion
+eggplant
 tomato
 radish
+squash
+spinach
